@@ -1,0 +1,18 @@
+<div fxLayout="row wrap" fxLayout.lt-md="column">
+  <mat-card class="example-card" *ngFor="let livro of livros">
+    <mat-card-header>
+      <div mat-card-avatar class="livrosexs"></div>
+      <mat-card-title>{{livro.titulo}}</mat-card-title>
+      <mat-card-subtitle>{{livro.id}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://w7.pngwing.com/pngs/537/41/png-transparent-book-book-material-plot-ppt-thumbnail.png" alt="Livros">
+    <mat-card-actions>
+      <button mat-fab color="primary" (click)="remover(livro)">
+        <mat-icon>remover</mat-icon>
+      </button>
+      <button mat-icon-button (click)="editar(livro.id)">
+        <mat-icon>editar</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,21 @@
+<h1>Cadastro dos Livros</h1>
+
+
+<br>
+<mat-form-field>
+  Titulo: <input matInput [(ngModel)]="livroTratamento.titulo" placeholder="Qual é titulo de livro?">
+</mat-form-field>
+<mat-form-field>
+  Autor: <input matInput [(ngModel)]="livroTratamento.autor" placeholder="Qual é Autor?">
+</mat-form-field>
+<mat-form-field>
+  Descricao: <input matInput [(ngModel)]="livroTratamento.descricao" placeholder="Digite a descricao">
+</mat-form-field>
+<mat-form-field>
+  Categoria: <input matInput [(ngModel)]="livroTratamento.categoria" placeholder="Qual é categoria?">
+</mat-form-field>
+
+<button mat-raised-button color="primary" (click)="cadastrarOuAtualizar()">{{nomeBotao}}</button>
+<br>
+<div class="mensagem-erro">{{mensagemErro}}</div>
+<br>
